@@ -6,8 +6,9 @@ import * as axios from "axios";
 
 class WeatherContainer extends React.Component {
   componentDidMount() {
-    axios.get(`https://www.metaweather.com/api/location/44418/`).then(response => {
-      this.props.setWeather(response.data.items);
+    axios.get(`/api/location/44418/`).then(response => {
+      //console.log(response.data)
+      //this.props.setWeather(response.data.items);
     });
   }
   render() {
