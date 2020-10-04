@@ -1,3 +1,93 @@
 .weather {
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 100px 15px 0;
+}
+
+.toggles {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.city {
+  background: #fff;
+  border-radius: 20px;
+  padding: 6px 16px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.city.active {
+  background: #FFDD60;
+  color: #222426;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 400px;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.title span {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title  {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  opacity: .5;
+  font-size: 14px;
+}
+
+.tempInfo {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theTemp {
+  font-size: 48px;
+  margin-right: 10px;
+
+}
+
+.tempInfo img {
+  max-width: 48px;
+  margin-right: 10px;
+}
+
+.additionalInformation {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.aiItem {
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.aiItem__title {
+  font-weight: 600;
+  margin-bottom: 5px;
 }
