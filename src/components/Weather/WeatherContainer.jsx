@@ -8,7 +8,6 @@ class WeatherContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
     axios.get(`/api/location/615702/`).then(response => {
-      //console.log(response.data)
       this.props.setWeather(response.data);
       this.props.toggleIsFetching(false);
     });
