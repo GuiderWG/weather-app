@@ -1,16 +1,16 @@
 import React from 'react';
 import style from './WeatherPanel.module.css'
 
+
 const WeatherPanel = ({weatherData: data}) => {
   let parseDate = new Date(data.time);
   return (
       <div className={style.panel}>
         <div className={style.title}><span>{data.title}</span>, {data.parent.title}</div>
         <div className={style.subtitle}>{parseDate.toDateString()}</div>
-        {data.consolidated_weather.filter((_, index) => index === 0).map((item) => {
-          console.log(item)
+        {data.consolidated_weather.filter((_, index) => index === 0).map((item, index) => {
           return (
-              <div className={style.generalInfo}>
+              <div className={style.generalInfo} key={index}>
                 <div className={style.tempInfo}>
                   <div className={style.theTemp}>{item.the_temp > 0 ? `+${Math.round(item.the_temp)}°` : `${Math.round(item.the_temp)}°`}</div>
                   <img src={`https://www.metaweather.com/static/img/weather/${item.weather_state_abbr}.svg`} alt=""/>

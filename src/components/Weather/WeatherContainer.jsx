@@ -1,8 +1,8 @@
 import React from 'react';
-import Weather from "./Weather";
-import {connect} from "react-redux";
-import {setCurrent, setWeather, toggleIsFetching} from "../../redux/weatherReducer";
-import * as axios from "axios";
+import Weather from './Weather';
+import {connect} from 'react-redux';
+import {setCurrent, setWeather, toggleIsFetching} from '../../redux/weatherReducer';
+import * as axios from 'axios';
 
 class WeatherContainer extends React.Component {
   componentDidMount() {

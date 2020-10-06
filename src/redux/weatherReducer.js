@@ -4,9 +4,9 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 
 let initialState = {
   places: [
-    {id: 1, name: "Paris", loc: "615702" },
-    {id: 2, name: "Moscow", loc: "2122265" },
-    {id: 3, name: 'Berlin', loc: "638242" },
+    {id: 1, name: 'Paris', loc: '615702' },
+    {id: 2, name: 'Moscow', loc: '2122265' },
+    {id: 3, name: 'Berlin', loc: '638242' },
   ],
   weatherData: null,
   currentPlace: 0,

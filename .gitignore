@@ -11,6 +11,12 @@
 # VS Code
 /.vscode
 
+# firebase
+/.firebase
+.firebaserc
+firebase-hosting-pull-request.yml
+firebase.json
+
 # testing
 /coverage
 

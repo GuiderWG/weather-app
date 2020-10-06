@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Weather.module.css'
-import Preloader from "../common/preloader/preloader";
-import WeatherPanel from "./WeatherPanel/WeatherPanel";
+import Preloader from '../common/preloader/preloader';
+import WeatherPanel from './WeatherPanel/WeatherPanel';
 
 const Weather = (props) => {
   return (
