@@ -12,8 +12,7 @@ const Weather = (props) => {
               className={`${style.city} ${props.currentPlace === index ? style.active : ''}`}
               key={index}>{place.name}</button>)}
         </div>
-
-       {props.isFetching ? <Preloader/> : <WeatherPanel weatherData={props.weatherData} />}
+       {props.isFetching ? <Preloader isError={props.isError} /> : <WeatherPanel weatherData={props.weatherData} />}
       </div>
   )
 

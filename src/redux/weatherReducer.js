@@ -1,6 +1,7 @@
 const SET_WEATHER = 'SET_WEATHER';
 const SET_CURRENT = 'SET_CURRENT';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
+const TOGGLE_IS_ERROR = 'TOGGLE_IS_ERROR';
 
 let initialState = {
   places: [
@@ -11,6 +12,7 @@ let initialState = {
   weatherData: null,
   currentPlace: 0,
   isFetching: true,
+  isError: false,
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -26,6 +28,10 @@ const weatherReducer = (state = initialState, action) => {
       return {...state, isFetching: action.isFetching}
     }
 
+    case TOGGLE_IS_ERROR: {
+      return {...state, isError: action.isError}
+    }
+
     default:
       return state;
   }
@@ -34,5 +40,6 @@ const weatherReducer = (state = initialState, action) => {
 export let setWeather = weather => ({type: SET_WEATHER, weather});
 export let setCurrent = currentPlace => ({type: SET_CURRENT, currentPlace});
 export const toggleIsFetching = isFetching =>  ({type: TOGGLE_IS_FETCHING, isFetching});
+export const toggleIsError = isError =>  ({type: TOGGLE_IS_ERROR, isError});
 
 export default weatherReducer;

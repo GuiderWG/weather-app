@@ -1,6 +1,8 @@
 .preloader {
   text-align: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 60px 0 40px;
 }
@@ -25,11 +27,21 @@ span.load:after {
 }
 span.load:before { right: 0; bottom: 0; animation: scaleChange_1 infinite linear 1s; }
 span.load:after { top: 0; left: 0; animation: scaleChange_2 infinite linear 1s; }
-span.load.dark:before,
-span.load.dark:after { background: #222; }
+span.load.error:before,
+span.load.error:after { background: #d00; }
 span.load.mini:after { border-width: 2px; }
 span.load.little:after { border-width: 3px; }
 span.load:after { border-width: 8px; }
+
+.errorText {
+  margin-top: 30px;
+  display: block;
+  color: #d00;
+  font-size: 14px;
+  transform: scale(0);
+  animation: show .3s linear;
+  animation-fill-mode: forwards;
+}
 
 @keyframes rotateLoad {
   0%		{ transform: rotate(0deg); }
@@ -44,4 +56,9 @@ span.load:after { border-width: 8px; }
   0%		{ transform: scale(0); }
   50%		{ transform: scale(1); }
   100%	{ transform: scale(0); }
+}
+@keyframes show {
+  0%		{ transform: scale(0); opacity: 0; }
+  50%		{ transform: scale(.5); opacity: .5; }
+  100%	{ transform: scale(1); opacity: 1; }
 }
