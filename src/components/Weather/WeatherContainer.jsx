@@ -7,7 +7,7 @@ import * as axios from 'axios';
 class WeatherContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
-    axios.get(`/api/location/615702/`).then(response => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/615702/`).then(response => {
       this.props.setWeather(response.data);
       this.props.toggleIsFetching(false);
     });
@@ -16,7 +16,7 @@ class WeatherContainer extends React.Component {
   onPageChanged = (currentNum, zip) => {
     this.props.toggleIsFetching(true);
     this.props.setCurrent(currentNum);
-    axios.get(`/api/location/${zip}/`).then(response => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${zip}/`).then(response => {
       this.props.setWeather(response.data);
       this.props.toggleIsFetching(false);
     });
