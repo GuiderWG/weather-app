@@ -1,0 +1,8 @@
+/.git
+/.vscode
+/.firebase
+/node_modules
+/build
+.firebaserc
+firebase-hosting-pull-request.yml
+firebase.json

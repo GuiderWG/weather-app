@@ -1,11 +1,10 @@
-import {combineReducers, createStore} from "redux";
-import weatherReducer from "./weatherReducer";
+import { combineReducers, createStore } from "redux"
+import weatherReducer from "./weatherReducer"
 
-
-let reducers = combineReducers({
+const reducers = combineReducers({
   weatherPage: weatherReducer,
 })
 
-let store = createStore(reducers);
+const store = createStore(reducers)
 
-export default store;
+export default store

@@ -1,21 +1,40 @@
-import React from 'react';
-import style from './Weather.module.css'
-import Preloader from '../common/preloader/preloader';
-import WeatherPanel from './WeatherPanel/WeatherPanel';
+import React from "react"
+import Preloader from "../common/preloader/preloader"
+import style from "./Weather.module.css"
+import WeatherPanel from "./WeatherPanel/WeatherPanel"
 
-const Weather = (props) => {
+const Weather = ({
+  places,
+  onPageChanged,
+  currentPlace,
+  isError,
+  weatherData,
+  isFetching,
+}) => {
   return (
-      <div className={style.weather}>
-        <div className={style.toggles}>
-          {props.places.map((place, index) => <button
-              onClick={()=>{props.onPageChanged(index, place.loc)}}
-              className={`${style.city} ${props.currentPlace === index ? style.active : ''}`}
-              key={index}>{place.name}</button>)}
-        </div>
-       {props.isFetching ? <Preloader isError={props.isError} /> : <WeatherPanel weatherData={props.weatherData} />}
+    <div className={style.weather}>
+      <div className={style.toggles}>
+        {places.map((place, index) => (
+          <button
+            onClick={() => {
+              onPageChanged(index, place.loc)
+            }}
+            className={`${style.city} ${
+              currentPlace === index ? style.active : ""
+            }`}
+            key={place.id}
+          >
+            {place.name}
+          </button>
+        ))}
       </div>
+      {isFetching ? (
+        <Preloader isError={isError} />
+      ) : (
+        <WeatherPanel weatherData={weatherData} />
+      )}
+    </div>
   )
+}
 
-};
-
-export default Weather;
+export default Weather
