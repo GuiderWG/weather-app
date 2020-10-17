@@ -1,13 +1,13 @@
-import * as axios from "axios"
-import React from "react"
-import { connect } from "react-redux"
+import * as axios from 'axios'
+import React from 'react'
+import { connect } from 'react-redux'
 import {
   setCurrent,
   setWeather,
   toggleIsError,
   toggleIsFetching,
-} from "../../redux/weatherReducer"
-import Weather from "./Weather"
+} from '../../redux/weatherReducer'
+import Weather from './Weather'
 
 class WeatherContainer extends React.Component {
   componentDidMount() {

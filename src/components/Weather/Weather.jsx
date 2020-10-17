@@ -1,7 +1,7 @@
-import React from "react"
-import Preloader from "../common/preloader/preloader"
-import style from "./Weather.module.css"
-import WeatherPanel from "./WeatherPanel/WeatherPanel"
+import React from 'react'
+import Preloader from '../common/preloader/preloader'
+import style from './Weather.module.css'
+import WeatherPanel from './WeatherPanel/WeatherPanel'
 
 const Weather = ({
   places,
@@ -20,7 +20,7 @@ const Weather = ({
               onPageChanged(index, place.loc)
             }}
             className={`${style.city} ${
-              currentPlace === index ? style.active : ""
+              currentPlace === index ? style.active : ''
             }`}
             key={place.id}
           >

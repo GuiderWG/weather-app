@@ -1,5 +1,5 @@
-import React from "react"
-import style from "./WeatherPanel.module.css"
+import React from 'react'
+import style from './WeatherPanel.module.css'
 
 const WeatherPanel = ({ weatherData: data }) => {
   const parseDate = new Date(data.time)

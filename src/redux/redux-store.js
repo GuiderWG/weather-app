@@ -1,5 +1,5 @@
-import { combineReducers, createStore } from "redux"
-import weatherReducer from "./weatherReducer"
+import { combineReducers, createStore } from 'redux'
+import weatherReducer from './weatherReducer'
 
 const reducers = combineReducers({
   weatherPage: weatherReducer,
