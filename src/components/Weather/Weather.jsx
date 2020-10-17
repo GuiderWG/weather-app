@@ -1,7 +1,7 @@
-import React from 'react'
-import Preloader from '../common/preloader/preloader'
-import style from './Weather.module.css'
-import WeatherPanel from './WeatherPanel/WeatherPanel'
+import React from 'react';
+import Preloader from '../common/preloader/preloader';
+import style from './Weather.module.css';
+import WeatherPanel from './WeatherPanel/WeatherPanel';
 
 const Weather = ({
   places,
@@ -17,7 +17,7 @@ const Weather = ({
         {places.map((place, index) => (
           <button
             onClick={() => {
-              onPageChanged(index, place.loc)
+              onPageChanged(index, place.loc);
             }}
             className={`${style.city} ${
               currentPlace === index ? style.active : ''
@@ -34,7 +34,7 @@ const Weather = ({
         <WeatherPanel weatherData={weatherData} />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Weather
+export default Weather;

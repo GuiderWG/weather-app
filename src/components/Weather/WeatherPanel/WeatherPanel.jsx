@@ -1,8 +1,8 @@
-import React from 'react'
-import style from './WeatherPanel.module.css'
+import React from 'react';
+import style from './WeatherPanel.module.css';
 
 const WeatherPanel = ({ weatherData: data }) => {
-  const parseDate = new Date(data.time)
+  const parseDate = new Date(data.time);
   return (
     <div className={style.panel}>
       <div className={style.title}>
@@ -53,7 +53,7 @@ const WeatherPanel = ({ weatherData: data }) => {
           </div>
         ))}
     </div>
-  )
-}
+  );
+};
 
-export default WeatherPanel
+export default WeatherPanel;

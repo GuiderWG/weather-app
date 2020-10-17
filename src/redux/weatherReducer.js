@@ -1,7 +1,7 @@
-const SET_WEATHER = 'SET_WEATHER'
-const SET_CURRENT = 'SET_CURRENT'
-const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
-const TOGGLE_IS_ERROR = 'TOGGLE_IS_ERROR'
+const SET_WEATHER = 'SET_WEATHER';
+const SET_CURRENT = 'SET_CURRENT';
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
+const TOGGLE_IS_ERROR = 'TOGGLE_IS_ERROR';
 
 const initialState = {
   places: [
@@ -13,39 +13,39 @@ const initialState = {
   currentPlace: 0,
   isFetching: true,
   isError: false,
-}
+};
 
 const weatherReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_WEATHER:
-      return { ...state, weatherData: action.weather }
+      return { ...state, weatherData: action.weather };
 
     case SET_CURRENT: {
-      return { ...state, currentPlace: action.currentPlace }
+      return { ...state, currentPlace: action.currentPlace };
     }
 
     case TOGGLE_IS_FETCHING: {
-      return { ...state, isFetching: action.isFetching }
+      return { ...state, isFetching: action.isFetching };
     }
 
     case TOGGLE_IS_ERROR: {
-      return { ...state, isError: action.isError }
+      return { ...state, isError: action.isError };
     }
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export const setWeather = (weather) => ({ type: SET_WEATHER, weather })
+export const setWeather = (weather) => ({ type: SET_WEATHER, weather });
 export const setCurrent = (currentPlace) => ({
   type: SET_CURRENT,
   currentPlace,
-})
+});
 export const toggleIsFetching = (isFetching) => ({
   type: TOGGLE_IS_FETCHING,
   isFetching,
-})
-export const toggleIsError = (isError) => ({ type: TOGGLE_IS_ERROR, isError })
+});
+export const toggleIsError = (isError) => ({ type: TOGGLE_IS_ERROR, isError });
 
-export default weatherReducer
+export default weatherReducer;

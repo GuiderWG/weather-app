@@ -1,5 +1,5 @@
-import React from 'react'
-import style from './preloadar.module.css'
+import React from 'react';
+import style from './preloadar.module.css';
 
 const Preloader = ({ isError }) => (
   <div className={style.preloader}>
@@ -12,6 +12,6 @@ const Preloader = ({ isError }) => (
       ''
     )}
   </div>
-)
+);
 
-export default Preloader
+export default Preloader;
