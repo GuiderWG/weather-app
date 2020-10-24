@@ -4,7 +4,7 @@
     <list default="true" id="98012df9-1ad1-41b9-bd78-60c59f405aca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/weatherReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/weatherReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +128,7 @@
       <workItem from="1603132131215" duration="381000" />
       <workItem from="1603136353181" duration="144000" />
       <workItem from="1603530535278" duration="2261000" />
-      <workItem from="1603536497787" duration="935000" />
+      <workItem from="1603536497787" duration="1131000" />
     </task>
     <task id="LOCAL-00001" summary="eslint + prettier optimization">
       <created>1602952801037</created>
