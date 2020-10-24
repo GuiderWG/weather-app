@@ -5,7 +5,7 @@ const TOGGLE_IS_ERROR = 'TOGGLE_IS_ERROR';
 
 const initialState = {
   places: [
-    { id: 1, name: 'Paris', loc: '615702' },
+    { id: 1, name: 'Paris2', loc: '615702' },
     { id: 2, name: 'Moscow', loc: '2122265' },
     { id: 3, name: 'Berlin', loc: '638242' },
   ],
